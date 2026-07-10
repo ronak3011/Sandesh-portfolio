@@ -420,25 +420,68 @@
     .clause {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      padding: 32px 28px;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+      padding: 40px 24px;
       border: 1px solid var(--hairline);
-      background: #FDFDFD;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background: #FFFFFF;
+      border-radius: 2px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .clause:hover {
+      border-color: var(--navy);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
 
-    .clause:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    .clause-icon {
+      width: 48px;
+      height: 48px;
+      color: var(--brass-bright);
+      margin-bottom: 20px;
+    }
+
+    .clause h3 {
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
     }
 
     .clause-mark {
       width: 32px;
       height: 2px;
       background: var(--brass-bright);
-      margin-bottom: 2px;
+      margin: 0 auto 16px;
+    }
+    
+    .clause p {
+      font-size: 14.5px;
+      color: #5A554C;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .clause-btn {
+      margin-top: auto;
+      border: 1px solid var(--brass-bright);
+      color: var(--brass-bright);
+      padding: 10px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .clause-btn:hover {
+      background: var(--brass-bright);
+      color: #fff;
     }
 
     .clause h3 {
@@ -899,36 +942,11 @@
           <a href="#practice" class="btn btn-ghost">View Practice Areas</a>
         </div>
       </div>
-      <div class="docket reveal"
-        style="padding: 0; border: 1px solid var(--hairline-dark); background: rgba(0,0,0,0.15); border-radius: 4px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
-        <div class="docket-title"
-          style="padding: 20px 24px; font-size:16px; font-family:'Source Serif 4', serif; color:var(--brass-bright); letter-spacing:0.02em; background: rgba(255,255,255,0.02); border-bottom:1px solid var(--hairline-dark);">
-          Five Chambers of Law</div>
-        <div style="display:flex; flex-direction:column;">
-          <div
-            style="padding: 16px 24px; font-size:14.5px; color:var(--parchment); font-family:'Inter', sans-serif; border-bottom:1px solid var(--hairline-dark); transition: background 0.2s;"
-            onmouseover="this.style.background='rgba(255,255,255,0.03)'"
-            onmouseout="this.style.background='transparent'">Family Law</div>
-          <div
-            style="padding: 16px 24px; font-size:14.5px; color:var(--parchment); font-family:'Inter', sans-serif; border-bottom:1px solid var(--hairline-dark); transition: background 0.2s;"
-            onmouseover="this.style.background='rgba(255,255,255,0.03)'"
-            onmouseout="this.style.background='transparent'">Civil Law</div>
-          <div
-            style="padding: 16px 24px; font-size:14.5px; color:var(--parchment); font-family:'Inter', sans-serif; border-bottom:1px solid var(--hairline-dark); transition: background 0.2s;"
-            onmouseover="this.style.background='rgba(255,255,255,0.03)'"
-            onmouseout="this.style.background='transparent'">Cyber Crime</div>
-          <div
-            style="padding: 16px 24px; font-size:14.5px; color:var(--parchment); font-family:'Inter', sans-serif; border-bottom:1px solid var(--hairline-dark); transition: background 0.2s;"
-            onmouseover="this.style.background='rgba(255,255,255,0.03)'"
-            onmouseout="this.style.background='transparent'">Succession & Legal Heirship</div>
-          <div
-            style="padding: 16px 24px; font-size:14.5px; color:var(--parchment); font-family:'Inter', sans-serif; transition: background 0.2s;"
-            onmouseover="this.style.background='rgba(255,255,255,0.03)'"
-            onmouseout="this.style.background='transparent'">Labour Law</div>
-        </div>
-      </div>
+      <div class="hero-logo reveal" style="display:flex; justify-content:center; align-items:center; height:100%;">
+      <svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke="var(--brass-bright)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.9;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="practice" id="practice">
     <div class="container">
@@ -938,95 +956,49 @@
       </div>
 
       <div class="practice-list">
+        <!-- Card 1 -->
         <div class="clause reveal">
+          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <h3>Family Law</h3>
           <div class="clause-mark"></div>
-          <div>
-            <h3>Family Law</h3>
-            <p>Steady representation through the most personal disputes a client will face.</p>
-          </div>
-          <div class="clause-detail">
-            <ul>
-              <li>Divorce &amp; judicial separation</li>
-              <li>Maintenance &amp; alimony</li>
-              <li>Child custody &amp; guardianship</li>
-              <li>Domestic violence protection</li>
-              <li>Adoption &amp; matrimonial settlements</li>
-            </ul>
-          </div>
+          <p>Steady representation through the most personal disputes a client will face.</p>
+          <a href="#" class="clause-btn">Read More</a>
         </div>
-
+        <!-- Card 2 -->
         <div class="clause reveal">
+          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 20v-4h6v4"></path></svg>
+          <h3>Civil Law</h3>
           <div class="clause-mark"></div>
-          <div>
-            <h3>Civil Law</h3>
-            <p>Disputes over property, contracts, and rights, argued with precision.</p>
-          </div>
-          <div class="clause-detail">
-            <ul>
-              <li>Property &amp; title disputes</li>
-              <li>Contract enforcement &amp; breach</li>
-              <li>Recovery suits</li>
-              <li>Injunctions &amp; specific performance</li>
-              <li>Tenancy &amp; landlord disputes</li>
-            </ul>
-          </div>
+          <p>Disputes over property, contracts, and rights, argued with precision.</p>
+          <a href="#" class="clause-btn">Read More</a>
         </div>
-
+        <!-- Card 3 -->
         <div class="clause reveal">
+          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <h3>Cyber Crime</h3>
           <div class="clause-mark"></div>
-          <div>
-            <h3>Cyber Crime</h3>
-            <p>Defending and pursuing matters where the offence began on a screen.</p>
-          </div>
-          <div class="clause-detail">
-            <ul>
-              <li>Online fraud &amp; financial scams</li>
-              <li>Identity theft &amp; impersonation</li>
-              <li>Cyberstalking &amp; harassment</li>
-              <li>Data theft &amp; IT Act matters</li>
-              <li>Defamation on digital platforms</li>
-            </ul>
-          </div>
+          <p>Defending and pursuing matters where the offence began on a screen.</p>
+          <a href="#" class="clause-btn">Read More</a>
         </div>
-
+        <!-- Card 4 -->
         <div class="clause reveal">
+          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <h3>Succession & Legal Heirship</h3>
           <div class="clause-mark"></div>
-          <div>
-            <h3>Succession, Legal Heirship &amp; Inheritance Recovery</h3>
-            <p>Securing a rightful claim after a death, with dignity and due process.</p>
-          </div>
-          <div class="clause-detail">
-            <ul>
-              <li>Legal heirship certificates</li>
-              <li>Succession certificates</li>
-              <li>Probate &amp; letters of administration</li>
-              <li>Inheritance &amp; property recovery</li>
-              <li>Will drafting &amp; contestation</li>
-            </ul>
-          </div>
+          <p>Securing a rightful claim after a death, with dignity and due process.</p>
+          <a href="#" class="clause-btn">Read More</a>
         </div>
-
+        <!-- Card 5 -->
         <div class="clause reveal">
+          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <h3>Labour Law</h3>
           <div class="clause-mark"></div>
-          <div>
-            <h3>Labour Law</h3>
-            <p>Standing for employees and employers when the workplace ends up in court.</p>
-          </div>
-          <div class="clause-detail">
-            <ul>
-              <li>Wrongful termination &amp; reinstatement</li>
-              <li>Wage &amp; gratuity disputes</li>
-              <li>Workplace harassment matters</li>
-              <li>Industrial &amp; labour tribunal cases</li>
-              <li>Employment contract review</li>
-            </ul>
-          </div>
+          <p>Standing for employees and employers when the workplace ends up in court.</p>
+          <a href="#" class="clause-btn">Read More</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="about" id="about">
+  </section> id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-portrait reveal">
