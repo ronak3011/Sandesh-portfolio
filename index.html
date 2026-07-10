@@ -414,6 +414,7 @@
       position: relative;
       display: flex;
       align-items: center;
+      margin: 0 -16px;
     }
     
     .practice-list {
@@ -424,7 +425,8 @@
       scroll-behavior: smooth;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      padding: 10px 4px;
+      padding: 20px 16px;
+      width: 100%;
     }
     
     .practice-list::-webkit-scrollbar {
@@ -432,8 +434,8 @@
     }
 
     .clause {
-      min-width: 320px;
-      flex: 0 0 auto;
+      flex: 0 0 calc(33.333% - 16px);
+      min-width: 280px;
       scroll-snap-align: start;
       display: flex;
       flex-direction: column;
@@ -448,12 +450,12 @@
     }
 
     .carousel-btn {
-      background: var(--navy);
-      color: var(--parchment);
+      background: #111;
+      color: #fff;
       border: none;
-      width: 48px;
-      height: 48px;
-      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      font-size: 18px;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -463,18 +465,19 @@
       top: 50%;
       transform: translateY(-50%);
       transition: background 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     
     .carousel-btn:hover {
       background: var(--brass-bright);
     }
     
-    .carousel-prev { left: -24px; }
-    .carousel-next { right: -24px; }
+    .carousel-prev { left: -10px; }
+    .carousel-next { right: -10px; }
     
     @media (max-width: 860px) {
-      .carousel-prev { left: -10px; }
-      .carousel-next { right: -10px; }
+      .carousel-prev { left: -5px; }
+      .carousel-next { right: -5px; }
     }
     
     .clause:hover {
