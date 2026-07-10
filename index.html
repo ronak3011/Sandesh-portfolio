@@ -416,7 +416,7 @@
       align-items: center;
       margin: 0 -16px;
     }
-    
+
     .practice-list {
       display: flex;
       gap: 24px;
@@ -428,7 +428,7 @@
       padding: 20px 16px;
       width: 100%;
     }
-    
+
     .practice-list::-webkit-scrollbar {
       display: none;
     }
@@ -465,24 +465,34 @@
       top: 50%;
       transform: translateY(-50%);
       transition: background 0.2s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    
+
     .carousel-btn:hover {
       background: var(--brass-bright);
     }
-    
-    .carousel-prev { left: -10px; }
-    .carousel-next { right: -10px; }
-    
-    @media (max-width: 860px) {
-      .carousel-prev { left: -5px; }
-      .carousel-next { right: -5px; }
+
+    .carousel-prev {
+      left: -10px;
     }
-    
+
+    .carousel-next {
+      right: -10px;
+    }
+
+    @media (max-width: 860px) {
+      .carousel-prev {
+        left: -5px;
+      }
+
+      .carousel-next {
+        right: -5px;
+      }
+    }
+
     .clause:hover {
       border-color: var(--navy);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
     .clause-icon {
@@ -507,13 +517,14 @@
       background: var(--brass-bright);
       margin: 0 auto 16px;
     }
-    
+
     .clause p {
       font-size: 14.5px;
       color: #5A554C;
       margin-bottom: 28px;
       line-height: 1.6;
     }
+
     .clause-btn {
       margin-top: auto;
       border: 1px solid var(--brass-bright);
@@ -529,6 +540,7 @@
       transition: all 0.2s ease;
       text-decoration: none;
     }
+
     .clause-btn:hover {
       background: var(--brass-bright);
       color: #fff;
@@ -993,10 +1005,13 @@
         </div>
       </div>
       <div class="hero-logo reveal" style="display:flex; justify-content:center; align-items:center; height:100%;">
-      <svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke="var(--brass-bright)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.9;"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <svg width="140" height="140" viewBox="0 0 24 24" fill="none" stroke="var(--brass-bright)" stroke-width="1"
+          stroke-linecap="round" stroke-linejoin="round" style="opacity:0.9;">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+        </svg>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="practice" id="practice">
     <div class="container">
@@ -1006,53 +1021,77 @@
       </div>
 
       <div class="carousel-wrap">
-        <button class="carousel-btn carousel-prev" onclick="document.querySelector('.practice-list').scrollBy({left: -344, behavior: 'smooth'})">❮</button>
-        
+        <button class="carousel-btn carousel-prev"
+          onclick="document.querySelector('.practice-list').scrollBy({left: -344, behavior: 'smooth'})">❮</button>
+
         <div class="practice-list">
           <!-- Card 1 -->
           <div class="clause reveal">
-          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-          <h3>Family Law</h3>
-          <div class="clause-mark"></div>
-          <p>Steady representation through the most personal disputes a client will face.</p>
-          <a href="#" class="clause-btn">Read More</a>
+            <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <h3>Family Law</h3>
+            <div class="clause-mark"></div>
+            <p>Steady representation through the most personal disputes a client will face.</p>
+            <a href="#" class="clause-btn">Read More</a>
+          </div>
+          <!-- Card 2 -->
+          <div class="clause reveal">
+            <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 20h20M5 20V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 20v-4h6v4"></path>
+            </svg>
+            <h3>Civil Law</h3>
+            <div class="clause-mark"></div>
+            <p>Disputes over property, contracts, and rights, argued with precision.</p>
+            <a href="#" class="clause-btn">Read More</a>
+          </div>
+          <!-- Card 3 -->
+          <div class="clause reveal">
+            <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <h3>Cyber Crime</h3>
+            <div class="clause-mark"></div>
+            <p>Defending and pursuing matters where the offence began on a screen.</p>
+            <a href="#" class="clause-btn">Read More</a>
+          </div>
+          <!-- Card 4 -->
+          <div class="clause reveal">
+            <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <h3>Succession & Legal Heirship</h3>
+            <div class="clause-mark"></div>
+            <p>Securing a rightful claim after a death, with dignity and due process.</p>
+            <a href="#" class="clause-btn">Read More</a>
+          </div>
+          <!-- Card 5 -->
+          <div class="clause reveal">
+            <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+              </path>
+            </svg>
+            <h3>Labour Law</h3>
+            <div class="clause-mark"></div>
+            <p>Standing for employees and employers when the workplace ends up in court.</p>
+            <a href="#" class="clause-btn">Read More</a>
+          </div>
         </div>
-        <!-- Card 2 -->
-        <div class="clause reveal">
-          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 20v-4h6v4"></path></svg>
-          <h3>Civil Law</h3>
-          <div class="clause-mark"></div>
-          <p>Disputes over property, contracts, and rights, argued with precision.</p>
-          <a href="#" class="clause-btn">Read More</a>
-        </div>
-        <!-- Card 3 -->
-        <div class="clause reveal">
-          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-          <h3>Cyber Crime</h3>
-          <div class="clause-mark"></div>
-          <p>Defending and pursuing matters where the offence began on a screen.</p>
-          <a href="#" class="clause-btn">Read More</a>
-        </div>
-        <!-- Card 4 -->
-        <div class="clause reveal">
-          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <h3>Succession & Legal Heirship</h3>
-          <div class="clause-mark"></div>
-          <p>Securing a rightful claim after a death, with dignity and due process.</p>
-          <a href="#" class="clause-btn">Read More</a>
-        </div>
-        <!-- Card 5 -->
-        <div class="clause reveal">
-          <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-          <h3>Labour Law</h3>
-          <div class="clause-mark"></div>
-          <p>Standing for employees and employers when the workplace ends up in court.</p>
-          <a href="#" class="clause-btn">Read More</a>
-        </div>
+        <button class="carousel-btn carousel-next"
+          onclick="document.querySelector('.practice-list').scrollBy({left: 344, behavior: 'smooth'})">❯</button>
       </div>
-      <button class="carousel-btn carousel-next" onclick="document.querySelector('.practice-list').scrollBy({left: 344, behavior: 'smooth'})">❯</button>
     </div>
-  </div>
   </section>
 
   <section class="about" id="about">
@@ -1167,7 +1206,7 @@
 
           <div
             style="font-size:32px; font-weight:600; color:var(--maroon); margin-bottom:16px; font-family:'Source Serif 4', serif;">
-            <a href="tel:+919987551234">9987 551 234</a>
+            <a>Contact Us</a>
           </div>
 
           <a href="https://wa.me/919987551234" target="_blank"
@@ -1226,6 +1265,8 @@
                     <option>2:00 PM - 2:30 PM</option>
                     <option>4:00 PM - 4:30 PM</option>
                     <option>5:00 PM - 5:30 PM</option>
+                    <option>6:00 PM - 6:30 PM</option>
+                    <option>7:00 PM - 7:30 PM</option>
                   </select>
                 </div>
               </div>
