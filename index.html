@@ -410,14 +410,31 @@
       background: var(--parchment);
     }
 
+    .carousel-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    
     .practice-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
       gap: 24px;
-      border-top: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 10px 4px;
+    }
+    
+    .practice-list::-webkit-scrollbar {
+      display: none;
     }
 
     .clause {
+      min-width: 320px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -428,6 +445,36 @@
       background: #FFFFFF;
       border-radius: 2px;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .carousel-btn {
+      background: var(--navy);
+      color: var(--parchment);
+      border: none;
+      width: 48px;
+      height: 48px;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background 0.2s;
+    }
+    
+    .carousel-btn:hover {
+      background: var(--brass-bright);
+    }
+    
+    .carousel-prev { left: -24px; }
+    .carousel-next { right: -24px; }
+    
+    @media (max-width: 860px) {
+      .carousel-prev { left: -10px; }
+      .carousel-next { right: -10px; }
     }
     
     .clause:hover {
@@ -955,9 +1002,12 @@
         <h2>Five chambers of law, one point of contact.</h2>
       </div>
 
-      <div class="practice-list">
-        <!-- Card 1 -->
-        <div class="clause reveal">
+      <div class="carousel-wrap">
+        <button class="carousel-btn carousel-prev" onclick="document.querySelector('.practice-list').scrollBy({left: -344, behavior: 'smooth'})">❮</button>
+        
+        <div class="practice-list">
+          <!-- Card 1 -->
+          <div class="clause reveal">
           <svg class="clause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           <h3>Family Law</h3>
           <div class="clause-mark"></div>
@@ -997,8 +1047,12 @@
           <a href="#" class="clause-btn">Read More</a>
         </div>
       </div>
+      <button class="carousel-btn carousel-next" onclick="document.querySelector('.practice-list').scrollBy({left: 344, behavior: 'smooth'})">❯</button>
     </div>
-  </section> id="about">
+  </div>
+  </section>
+
+  <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
         <div class="about-portrait reveal">
