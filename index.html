@@ -907,7 +907,9 @@
     }
 
     .field select {
-      background: var(--parchment);
+      background: transparent;
+      border-radius: 0;
+      color: var(--ink);
     }
 
     .field input:focus,
@@ -1056,8 +1058,8 @@
           </g>
 
           <!-- Center Text SK -->
-          <text x="80" y="115" font-family="'Source Serif 4', serif" font-size="78" text-anchor="middle" fill="var(--parchment)" stroke="none" font-weight="400">S</text>
-          <text x="125" y="132" font-family="'Source Serif 4', serif" font-size="82" text-anchor="middle" fill="var(--parchment)" stroke="none" font-weight="400">K</text>
+          <text x="94" y="120" font-family="'Source Serif 4', serif" font-size="78" text-anchor="middle" fill="var(--parchment)" stroke="none" font-weight="400">S</text>
+          <text x="110" y="134" font-family="'Source Serif 4', serif" font-size="82" text-anchor="middle" fill="var(--parchment)" stroke="none" font-weight="400">K</text>
 
           <!-- Bottom Text -->
           <text x="100" y="172" font-family="'Source Serif 4', serif" font-size="15" text-anchor="middle" fill="var(--parchment)" stroke="none" letter-spacing="0.1em">SANDESH KADAM</text>
@@ -1347,8 +1349,7 @@
 
             <div class="field" style="margin-top:8px;">
               <label for="nature">Nature Of Matter</label>
-              <select name="nature" id="nature"
-                style="width:100%; padding:14px; font-size:15px; border:1px solid var(--hairline-dark); border-radius:4px; font-family:'Inter', sans-serif;">
+              <select name="nature" id="nature" required>
                 <option value="" disabled selected>Select</option>
                 <option>Family Law</option>
                 <option>Civil Law</option>
@@ -1382,8 +1383,7 @@
                 </div>
                 <div class="field" style="margin-top:8px;">
                   <label for="time">Time Slot</label>
-                  <select name="time" id="time"
-                    style="width:100%; padding:14px; font-size:15px; border:1px solid var(--hairline-dark); border-radius:4px; font-family:'Inter', sans-serif;">
+                  <select name="time" id="time" required>
                     <option value="" disabled selected>Select a Time Slot</option>
                     <option>10:00 AM - 10:30 AM</option>
                     <option>10:30 AM - 11:00 AM</option>
